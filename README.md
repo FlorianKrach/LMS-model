@@ -5,7 +5,7 @@ __Article Title__: Reference values of body composition parameters and visceral 
 
 __DOI__: 10.1038/s41430-020-0596-5, 2019EJCN0971
 
-__Link__: [https://www.nature.com/articles/s41430-020-0596-5]
+__Link__: https://www.nature.com/articles/s41430-020-0596-5
 
 __Citation__: Ofenheimer, A., Breyer-Kohansal, R., Hartl, S. et al. Reference values of body composition parameters and visceral adipose tissue (VAT) by DXA in adults aged 18–81 years—results from the LEAD cohort. Eur J Clin Nutr (2020).
 
