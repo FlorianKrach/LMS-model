@@ -5,6 +5,8 @@ install.packages("writexl")
 install.packages('VGAM')
 
 # load the needed libraries:
+
+
 library(readxl)
 library(writexl)
 library(VGAM)
@@ -41,23 +43,25 @@ perc_line_width = c(2,2,2,2,2,2,2)  # line widths of the percentile curves, eith
 perc_line_style = c(1,2,3,2,1)  # line styles of the percentile curves, either 1dim or same as dim as color
 perc_label_dist = c(0,0,0,0,0)  # the extra dist between the end of line and the label
 min.y.label.diff = 0.01  # minimum distance on y-axis (in percent of the entire displayed y-axis part) that has to be between two labels on the perc plot (change this if some of the labels intersect)
-grid.col = 'light gray'
-grid.lty = 1
-grid.lwd = 0.5
-n.x.ticks = 6
+
+# grid: first entry for small steps, second entry for bigger steps
+grid.col = c('light gray', 'light gray')
+grid.lty = c(1,1)
+grid.lwd = c(0.5,1.5)
+n.x.ticks = 12
 n.y.ticks.mult = 1
-grid.x.dist = 0.1
-grid.y.dist = 0.1
+grid.x.dist = c(0.25, 1)
+grid.y.dist = c(0.25, 1)
 point_color = 'light gray'  # color of the points in the percentile curve plot with points
 point_style = 20  # style of the points in the percentile curve plot with points, suggested: 1, 20
-xdist = 0.2 # distance on x-axis, suggested: 1 for children, 5 for adults
+xdist = 0.4 # distance on x-axis, suggested: 1 for children, 5 for adults
 x.plot.min = 6
 x.plot.max = 18
 length.t.scale = 500
 
   
 plot.height = 6  # the height of the saved plots
-plot.width = 7  # the width of the saved plots
+plot.width = 10  # the width of the saved plots
 plot.res = 300  # the resolution of the saved plots
 
 # here is the parameters for splitting the data:
@@ -99,8 +103,10 @@ plot_percentiles = function(fit, percentiles, gender, x.col, y.col, y.lim, lengt
          xlim = c(min(t.scale.plot), max(t.scale.plot)+xdist), ylab = get.pretty.names(y.col),
          ylim = y.lim)
     if (add.grid){
-      abline(v = seq(x.plot.min, x.plot.max, by=grid.x.dist), lwd = grid.lwd, col = grid.col, lty = grid.lty)
-      abline(h = seq(round(y.lim[1]), round(y.lim[2]), by=grid.y.dist), lwd = grid.lwd, col = grid.col, lty = grid.lty)
+      abline(v = seq(x.plot.min, x.plot.max, by=grid.x.dist[1]), lwd = grid.lwd[1], col = grid.col[1], lty = grid.lty[1])
+      abline(h = seq(round(y.lim[1]), round(y.lim[2]), by=grid.y.dist[1]), lwd = grid.lwd[1], col = grid.col[1], lty = grid.lty[1])
+      abline(v = seq(x.plot.min, x.plot.max, by=grid.x.dist[2]), lwd = grid.lwd[2], col = grid.col[2], lty = grid.lty[2])
+      abline(h = seq(round(y.lim[1]), round(y.lim[2]), by=grid.y.dist[2]), lwd = grid.lwd[2], col = grid.col[2], lty = grid.lty[2])
       # grid(nx = grid.n.x.ticks, ny = (y.lim[2] - y.lim[1])*grid.y.ticks.mult, lwd = grid.lwd, col = grid.col, lty = grid.lty)
     }
   }
