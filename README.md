@@ -16,5 +16,12 @@ This is a repository with the entire code used to create the LMS models, plots a
 The code is written in R.
 
 
+## Data & Applications
+While the raw input data is not publicly available, the generated LMS model output data (LMS values and percentile curves for children and adults) can be found [here](https://github.com/FlorianKrach/scientific-LMS-zscore-app/tree/master/data). It is part of the [Scientific LMS Z-Score App](https://github.com/FlorianKrach/scientific-LMS-zscore-app), a python application to compute z-scores based on our generated reference values.
+
+A more easily accessible version of this is the corresponding [WebApp](https://floriankrach.github.io/pyscripts/zscore-app-pyscript/index-scientific.html).
+
+
+
 ## Citation
 If you find this code useful or if you use it for your own work, please cite the paper referenced above.
