@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Krach"
+  given-names: "Florian"
+title: "LMS model implementation"
+version: 1.0.0
+date-released: 2020-02-07
+url: "https://github.com/FlorianKrach/LMS-model"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Ofenheimer"
+    given-names: "Alina"
+  - family-names: "Breyer-Kohansal"
+    given-names: "Robab"
+  - family-names: "Hartl"
+    given-names: "Sylvia"
+  - family-names: "Burghuber"
+    given-names: "Otto C"
+  - family-names: "Krach"
+    given-names: "Florian"
+  - family-names: "Schrott"
+    given-names: "Andrea"
+  - family-names: "Wouters"
+    given-names: "Emiel FM"
+  - family-names: "Franssen"
+    given-names: "Frits ME"
+  - family-names: "Breyer"
+    given-names: "Marie-Kathrin"
+  doi: "10.1038/s41430-020-0596-5"
+  journal: "European journal of clinical nutrition"
+  title: "Reference values of body composition parameters and visceral adipose tissue (VAT) by DXA in adults aged 18--81 years—results from the LEAD cohort"
+  start: 1181 # First page number
+  end: 1191 # Last page number
+  issue: 8
+  volume: 74
+  year: 2020
+  publisher: "Nature Publishing Group UK London"
